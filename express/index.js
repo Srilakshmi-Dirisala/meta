@@ -27,6 +27,19 @@ const allCharts = require('../src/routes/portfolio/allCharts.Router')
 const marketCapitalization = require('../src/routes/portfolio/marketCapitalization.Router')
 const getMarketDexTvl = require('../src/routes/portfolio/marketDexTVL.Router')
 const arrivalTime = require('../src/routes/portfolio/arrivalTime.Router')
+const LiquidityInfo = require('../src/routes/liquidity.Router')
+const chartTokenInfo=require('../src/routes/chartTokenInfo.Router')
+const LatestPairsTrades=require('../src/routes/LatestPairsTrades.Router')
+const TokenChartTrades=require('../src/routes/TokenChartTrades.Router')
+const moralisDexTrades=require('../src/routes/moralisDexTrades.Router')
+const TokenLiquidity=require('../src/routes/TokenLiquidity.Router')
+const RugTokenTrades=require('../src/routes/RugTokenTrades.Router')
+const RugTokenDetails=require('../src/routes/RugTokenDetails.Router')
+const nftRarity=require('../src/routes/NFT/nftRarity.Router')
+const CollectionInfo=require('../src/routes/NFT/CollectionInfo.Router')
+//const tokenTrades=require('../src/routes/getToken.Router')
+//const TokenPairInfo=require('../src/routes/TokenPairInfo.Router')
+
 
 module.exports = () => { 
   poolPromise;
@@ -114,6 +127,19 @@ module.exports = () => {
   app.use(endpoint,marketCapitalization)
   app.use(endpoint,getMarketDexTvl)
   app.use(endpoint,arrivalTime)
+  app.use(endpoint,LiquidityInfo)
+  app.use(endpoint,chartTokenInfo)
+  app.use(endpoint,LatestPairsTrades)
+  app.use(endpoint,TokenChartTrades)
+  app.use(endpoint,moralisDexTrades)
+  app.use(endpoint,TokenLiquidity)
+  app.use(endpoint,RugTokenTrades)
+  app.use(endpoint,RugTokenDetails)
+  app.use(endpoint,nftRarity)
+  app.use(endpoint,CollectionInfo)
+
+  //app.use(endpoint,tokenTrades)
+  //app.use(endpoint,TokenPairInfo)
 
   return app;
 }
