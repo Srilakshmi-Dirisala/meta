@@ -1,7 +1,7 @@
-const { getMethod } = require("../../../utilities/methods")
-const { supportNetworks } = require("../../../utilities/networks")
-const { getAllProtocolsUrl, getAllChartsUrl } = require("../../../utilities/urls")
-const { chainDataFilter } = require("../../../utilities/utility")
+const { getMethod } = require("../../utilities/methods")
+const { supportNetworks } = require("../../utilities/networks")
+const { getAllChartsUrl, getAllProtocolsUrl } = require("../../utilities/urls")
+const { tvlDataSort, chainDataFilter } = require("../../utilities/utility")
 
 
 const getAllChartsService = async (req,res) => {

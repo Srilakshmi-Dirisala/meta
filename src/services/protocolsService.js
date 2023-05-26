@@ -1,7 +1,9 @@
-const { getMethod } = require("../../utilities/methods")
-const { supportNetworks } = require("../../utilities/networks")
-const { getAllProtocolsUrl } = require("../../utilities/urls")
-const { dataSort } = require("../../utilities/utility")
+const { getMethod } = require("../utilities/methods")
+const { supportNetworks } = require("../utilities/networks")
+const { getAllProtocolsUrl } = require("../utilities/urls")
+const { dataSort } = require("../utilities/utility")
+
+
 
 const getAllProtocolsService = async () => {
     try {

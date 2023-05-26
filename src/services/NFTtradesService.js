@@ -1,6 +1,7 @@
-const { postMethod } = require("../../utilities/methods");
-const { getBitqueryUrl } = require("../../utilities/urls");
-const { nftQuery } = require("../../utilities/utility")
+const { postMethod } = require("../utilities/methods");
+const { getBitqueryUrl } = require("../utilities/urls");
+const { nftQuery } = require("../utilities/utility");
+
 
 const getNftTradeService = async (req, res, next) => {
     try {

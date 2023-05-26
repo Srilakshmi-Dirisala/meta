@@ -1,7 +1,8 @@
-const { getMethod } = require("../../../utilities/methods")
-const { supportNetworks } = require("../../../utilities/networks")
-const { kingDefiMarketCap, defiPulseforTvl } = require("../../../utilities/urls")
-const { chainDataFilterForText } = require("../../../utilities/utility")
+const { getMethod } = require("../../utilities/methods")
+const { supportNetworks } = require("../../utilities/networks")
+const { kingDefiMarketCap, defiPulseforTvl } = require("../../utilities/urls")
+const { chainDataFilterForText } = require("../../utilities/utility")
+
 
 
 const getMarketDexTvlService = async (req, res, next) => {

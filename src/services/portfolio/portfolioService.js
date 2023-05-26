@@ -1,6 +1,7 @@
-const { getMethod } = require("../../../utilities/methods")
-const { unmarshalSupportNetworks, mappingNetworks } = require("../../../utilities/networks")
-const { getPoolTokensUrl, getTokenTransactions } = require("../../../utilities/urls")
+const { getMethod } = require("../../utilities/methods")
+const { unmarshalSupportNetworks, mappingNetworks } = require("../../utilities/networks")
+const { getPoolTokensUrl, getTokenTransactions } = require("../../utilities/urls")
+
 
 
 const portfolioService = async (req, res, next) => {

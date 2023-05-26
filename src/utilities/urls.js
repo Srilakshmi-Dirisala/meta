@@ -1,4 +1,4 @@
-const { networks } = require('../config')
+//const { networks } = require('../config')
 const moment = require('moment')
 const network = require('./network')
 
@@ -749,7 +749,7 @@ module.exports.getPoolDataUrl = Address => {
     }
   }
   
-  const getKeys = network => {
+module.exports.getKeys = network => {
     if (network == 'bsc') {
       return 'GBBNZ28QERQ8WABZ7ACJIU68VZUJKFXIEU'
     } else if (network == 'polygon') {

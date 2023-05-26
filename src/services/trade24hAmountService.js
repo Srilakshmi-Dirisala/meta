@@ -1,6 +1,7 @@
-const { postMethod } = require("../../utilities/methods");
-const { getBitqueryUrl } = require("../../utilities/urls");
-const { Trade24hAmountQuery } = require("../../utilities/utility")
+const { postMethod } = require("../utilities/methods");
+const { getBitqueryUrl } = require("../utilities/urls");
+const { Trade24hAmountQuery } = require("../utilities/utility");
+
 
 const getTrade24hAmountService = async (req, res, next) => {
     try {

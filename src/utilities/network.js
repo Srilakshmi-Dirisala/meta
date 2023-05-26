@@ -1,4 +1,4 @@
-const config = require('../config')
+const config = require('../../config')
 module.exports = (req, res, next) => {
   if (!req.headers.address) {
     req.headers.address = '0xb57f6f2f3a44d317852ddf4af7c446b247253ecc'

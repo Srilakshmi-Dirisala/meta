@@ -1,5 +1,6 @@
-const { getMethod } = require("../../utilities/methods")
-const { getPoolTokensUrl } = require("../../utilities/urls")
+const { getMethod } = require("../utilities/methods")
+const { getPoolTokensUrl } = require("../utilities/urls")
+
 
 const getValueTodayService = async (req, res, next) => {
     req.query.Network = req.params.Network

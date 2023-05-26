@@ -1,5 +1,6 @@
-const { getMethod } = require("../../utilities/methods")
-const { getPoolTokensUrl } = require("../../utilities/urls")
+const { getMethod } = require("../utilities/methods")
+const { getPoolTokensUrl } = require("../utilities/urls")
+
 
 
 const getgetTokenBalanceService = async (req, res, next) => {

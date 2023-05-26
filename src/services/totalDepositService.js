@@ -1,6 +1,7 @@
-const { getMethod } = require("../../utilities/methods")
-const { getTotalDepositUrl } = require("../../utilities/urls")
-const { totalDepositData } = require("../../utilities/utility")
+const { getMethod } = require("../utilities/methods")
+const { getTotalDepositUrl } = require("../utilities/urls")
+const { totalDepositData } = require("../utilities/utility")
+
 
 const getTotalDepositService = async (req, res, next) => {
     req.query.Address = req.params.Address

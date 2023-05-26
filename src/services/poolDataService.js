@@ -1,5 +1,6 @@
-const { getMethod } = require("../../utilities/methods")
-const { getPoolDataUrl } = require("../../utilities/urls")
+const { getMethod } = require("../utilities/methods");
+const { getPoolDataUrl } = require("../utilities/urls");
+
 
 const getPoolDataService = async (req, res, next) => {
     try {

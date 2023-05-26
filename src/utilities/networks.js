@@ -1,4 +1,4 @@
-const { networks } = require('../config')
+const { networks } = require('../../config')
 const moment = require('moment')
 const network = require('./network')
 
@@ -36,7 +36,7 @@ module.exports.supportNetworks = () => {
   ]
 }
 
-const getDebankSupportedNetwork = network => {
+module.exports.getDebankSupportedNetwork = network => {
   if (
     network.toLocaleLowerCase() === 'Polygon'.toLocaleLowerCase() ||
     network.toLocaleLowerCase() === 'MATIC'.toLocaleLowerCase()

@@ -1,6 +1,7 @@
-const { getMethod } = require("../../../utilities/methods")
-const { supportNetworks } = require("../../../utilities/networks")
-const { getFarmUrl } = require("../../../utilities/urls")
+const { getMethod } = require("../../utilities/methods")
+const { supportNetworks } = require("../../utilities/networks")
+const { getFarmUrl } = require("../../utilities/urls")
+
 
 
 const getArrivalTimeService = async (req, res, next) => {
@@ -25,7 +26,7 @@ const getArrivalTimeService = async (req, res, next) => {
           x => x.name.toLowerCase() === NetworkOrCoin.toLowerCase()
         )
         if (DataChain.name.toLocaleLowerCase() !== 'ethereum') {
-          const data = await getMethodd(
+          const data = await getMethod(
             getFarmUrl(DataChain.name.toLocaleLowerCase())
           )
           if (data.data) {

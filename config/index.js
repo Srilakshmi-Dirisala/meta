@@ -16,8 +16,7 @@ const env = () => {
       }
     },
   
-    mailOptions: {
-      // apiKey: `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`,
-      apiKey: `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`,
-      from: 'metadappservices@gmail.com'
+   mailOptions : {
+      apiKey: process.env.apiKey,
+      mail:process.env.from
     }}

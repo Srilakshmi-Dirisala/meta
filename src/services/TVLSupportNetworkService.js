@@ -1,7 +1,7 @@
-const { getMethod } = require("../../utilities/methods")
-const { supportNetworks } = require("../../utilities/networks")
-const { getAllChartsUrl } = require("../../utilities/urls")
-const { totalLiquidityUSD } = require("../../utilities/utility")
+const { getMethod } = require("../utilities/methods")
+const { supportNetworks } = require("../utilities/networks")
+const { getAllChartsUrl } = require("../utilities/urls")
+const { totalLiquidityUSD } = require("../utilities/utility")
 
 const getSupportNetworksTVLService = async (req, res, next) => {
     let chains = []

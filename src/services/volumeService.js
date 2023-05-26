@@ -1,5 +1,6 @@
-const { getMethod } = require("../../utilities/methods")
-const { getVolumeUrl } = require("../../utilities/urls")
+const { getMethod } = require("../utilities/methods")
+const { getVolumeUrl } = require("../utilities/urls")
+
 
 const getVolumeService = async (req, res, next) => {
     req.query.Network = req.params.Network

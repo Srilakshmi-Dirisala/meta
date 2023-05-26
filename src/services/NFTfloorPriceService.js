@@ -1,5 +1,6 @@
-const { getMethod } = require("../../utilities/methods")
-const { nftFloorPrice } = require("../../utilities/urls")
+const { getMethod } = require("../utilities/methods")
+const { nftFloorPrice } = require("../utilities/urls")
+
 
 const getNftFloorPriceService = async (req, res, next) => {
     try {

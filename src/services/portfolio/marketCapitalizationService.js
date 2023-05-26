@@ -1,7 +1,8 @@
-const { postMethod, getMethod } = require("../../../utilities/methods")
-const { supportNetworks, mappingBitQueryFields } = require("../../../utilities/networks")
-const { getBitqueryUrl, getMarketCapForDefi, kingDefiMarketCap } = require("../../../utilities/urls")
-const { dataSort } = require("../../../utilities/utility")
+const { postMethod, getMethod } = require("../../utilities/methods")
+const { supportNetworks, mappingBitQueryFields } = require("../../utilities/networks")
+const { getBitqueryUrl, getMarketCapForDefi, kingDefiMarketCap } = require("../../utilities/urls")
+const { dataSort } = require("../../utilities/utility")
+
 
 
 const getMarketCapitalizationService = async (req, res, next) => {

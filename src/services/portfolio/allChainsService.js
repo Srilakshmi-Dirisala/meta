@@ -1,4 +1,5 @@
-const { supportNetworks } = require("../../../utilities/networks")
+const { supportNetworks } = require("../../utilities/networks")
+
 
 const getAllChainsService = async () => {
     try {

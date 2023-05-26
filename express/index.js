@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require("cors");
 const { endpoint } = require('../config');
 const { poolPromise } = require('../database');
-const redis = require('../cron/dextool')
-const utilities = require('../utilities');
+//const redis = require('../cron/dextool')
+const utilities = require('../src/utilities');
 
 
 const protocols = require('../src/routes/protocols.Router')
@@ -33,10 +33,10 @@ module.exports = () => {
   for (const utility in utilities) {
     global[utility] = utilities[utility];
   }
-  global['redis'] = redis;
-  redis.setParameter('test', { date: "27-25-01", data: [1, 2, 3, 4] })
-  const dd = redis.getParameter("kkkkk")
-  console.log("DDDD:", dd)
+//  global['redis'] = redis;
+//  redis.setParameter('test', { date: "27-25-01", data: [1, 2, 3, 4] })
+//  const dd = redis.getParameter("kkkkk")
+//  console.log("DDDD:", dd)
   const app = express();
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: false }));
