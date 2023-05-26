@@ -6,6 +6,7 @@ const { poolPromise } = require('../database');
 //const redis = require('../cron/dextool')
 const utilities = require('../src/utilities');
 
+// const inchNetwork = require('../src/routes/1inchNetwork');
 
 const protocols = require('../src/routes/protocols.Router')
 const supportNetworksTVL = require('../src/routes/TVLSupportNetworks.Router')
@@ -21,13 +22,36 @@ const poolData = require('../src/routes/poolData.Router')
 const topNFTsales = require('../src/routes/topNFTsales.Router')
 const NFTfloorPrice = require('../src/routes/NFTfloorPrice.Router')
 const top5NFTsales = require('../src/routes/top5NFTsales.Router')
+// portfolio
 const portfolio =require ('../src/routes/portfolio/portfolio.Router')
 const allChains = require('../src/routes/portfolio/allChains.Router')
 const allCharts = require('../src/routes/portfolio/allCharts.Router')
 const marketCapitalization = require('../src/routes/portfolio/marketCapitalization.Router')
 const getMarketDexTvl = require('../src/routes/portfolio/marketDexTVL.Router')
 const arrivalTime = require('../src/routes/portfolio/arrivalTime.Router')
-
+const getNfts = require('../src/routes/portfolio/getNfts.Router')
+const portfolioTokens = require('../src/routes/portfolio/portfolioTokens.Router')
+const nftAnalysis = require('../src/routes/portfolio/NFTanalysis.Router')
+const topMarkets = require('../src/routes/portfolio/topMarkets.Router')
+const tokenDetails = require('../src/routes/portfolio/tokenDetails.Router')
+const portfolioPools = require('../src/routes/portfolio/portfolioPools.Router')
+const portfolioNfts = require('../src/routes/portfolio/portfolioNfts.Router')
+const portfolioTransaction = require('../src/routes/portfolio/portfolioTransaction.Router')
+const NftTransactions = require('../src/routes/portfolio/NftTransaction.Router') 
+const networkTxnCount = require('../src/routes/portfolio/networkTxnCount.Router')
+const userNft = require('../src/routes/portfolio/userNfts.Router')
+const userPoolsWithYield = require('../src/routes/portfolio/userPoolsWithYield.Router')
+// 1inchNetwork
+const getTokens = require('../src/routes/1inchNetwork/getTokens.Router')
+const searchToken = require('../src/routes/1inchNetwork/serachToken.Router')
+const getPairs = require('../src/routes/1inchNetwork/getParis.Router')
+const ohlc = require('../src/routes/1inchNetwork/ohlc.Router')
+const getQuotes = require('../src/routes/1inchNetwork/getQuote.Router')
+const candleSeries = require('../src/routes/1inchNetwork/candleSeries.Router')
+const swap = require('../src/routes/1inchNetwork/swap.Router')
+const pairDetails = require('../src/routes/1inchNetwork/pairDetails.Router')
+const transactionDex = require('../src/routes/1inchNetwork/transactionDex.Router')
+const yieldFarming = require('../src/routes/yieldFarming/yieldFarming.Router')
 module.exports = () => { 
   poolPromise;
   for (const utility in utilities) {
@@ -108,12 +132,40 @@ module.exports = () => {
   app.use(endpoint,topNFTsales)
   app.use(endpoint,NFTfloorPrice)
   app.use(endpoint,top5NFTsales)
+  //portfolio
   app.use(endpoint,portfolio)
   app.use(endpoint,allChains)
   app.use(endpoint,allCharts)
   app.use(endpoint,marketCapitalization)
   app.use(endpoint,getMarketDexTvl)
   app.use(endpoint,arrivalTime)
+  app.use(endpoint,portfolioTokens)
+  app.use(endpoint,nftAnalysis)
+  app.use(endpoint,topMarkets)
+  app.use(endpoint,getNfts)
+  app.use(endpoint,tokenDetails)
+  app.use(endpoint,portfolioPools)
+  app.use(endpoint,portfolioNfts)
+  app.use(endpoint,portfolioTransaction)
+  app.use(endpoint,NftTransactions)
+  app.use(endpoint,networkTxnCount)
+  app.use(endpoint,userNft)
+  app.use(endpoint,userPoolsWithYield)
+//inchNetwork
+  app.use(endpoint,getTokens)
+  app.use(endpoint,searchToken)
+  app.use(endpoint,getPairs)
+  app.use(endpoint,ohlc)
+  app.use(endpoint,getQuotes)
+  app.use(endpoint,candleSeries)
+  app.use(endpoint,swap)
+  app.use(endpoint,pairDetails)
+  app.use(endpoint,transactionDex)
+  //yieldFarming
+  app.use(endpoint,yieldFarming)
+
+  // app.use(endpoint,inchNetwork)
+
 
   return app;
 }
